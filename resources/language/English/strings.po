@@ -1,0 +1,103 @@
+# XBMC Media Center language file
+# Addon Name: XBMC Audio Equalizer
+# Addon id: script.xbmc.audio.equalizer
+# Addon version: 2.1.0
+# Addon Provider: n_voronov
+msgid ""
+msgstr ""
+"Project-Id-Version: XBMC Main Translation Project (Frodo)\n"
+"Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: XBMC Translation Team\n"
+"Language-Team: Amharic (http://www.transifex.com/projects/p/XBMC-Main-Frodo/language/am/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+msgctxt "#30001"
+msgid "Failed to save audio settings"
+msgstr ""
+
+msgctxt "#30002"
+msgid "Enable debug logging"
+msgstr ""
+
+msgctxt "#30003"
+msgid "Enable debug logging"
+msgstr ""
+
+msgctxt "#49999"
+msgid "Audio Equalizer"
+msgstr ""
+
+msgctxt "#50000"
+msgid "EQ Enabled"
+msgstr ""
+
+msgctxt "#50001"
+msgid "Keep Settings"
+msgstr ""
+
+msgctxt "#50002"
+msgid "Preset : "
+msgstr ""
+
+msgctxt "#50003"
+msgid "Remove Preset"
+msgstr ""
+
+msgctxt "#50004"
+msgid "Save Preset"
+msgstr ""
+
+msgctxt "#50005"
+msgid "Reset Settings"
+msgstr ""
+
+msgctxt "#50006"
+msgid "Apply Settings"
+msgstr ""
+
+msgctxt "#50007"
+msgid "Quit"
+msgstr ""
+
+msgctxt "#50008"
+msgid "Hz"
+msgstr ""
+
+msgctxt "#50009"
+msgid "kHz"
+msgstr ""
+
+msgctxt "#50010"
+msgid "dB"
+msgstr ""
+
+msgctxt "#50011"
+msgid "Select Preset"
+msgstr ""
+
+msgctxt "#50012"
+msgid "Input Preset Name"
+msgstr ""
+
+msgctxt "#50013"
+msgid "Do you want remove preset - "
+msgstr ""
+
+msgctxt "#50014"
+msgid "No"
+msgstr ""
+
+msgctxt "#50015"
+msgid "Yes"
+msgstr ""
+
+msgctxt "#50016"
+msgid "Do you want select preset - "
+msgstr ""
+

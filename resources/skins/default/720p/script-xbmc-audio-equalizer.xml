@@ -1,0 +1,1072 @@
+<window>
+	<defaultcontrol always="false">200</defaultcontrol>
+	<allowoverlays>false</allowoverlays>
+	<animation effect="fade" time="250">WindowOpen</animation>
+	<animation effect="fade" time="250">WindowClose</animation>
+    	<coordinates>
+		<system>1</system>
+		<left>200</left>
+		<top>45</top>
+    	</coordinates>
+    	<controls>
+		<control type="group">
+			<control type="image">
+                        	<description>background image</description>
+				<left>0</left>
+				<top>0</top>
+				<width>880</width>
+				<height>630</height>
+				<texture border="40">DialogBack.png</texture>
+			</control>
+			<control type="button" id="100">
+				<description>Close Window button</description>
+				<left>790</left>
+				<top>15</top>
+				<width>64</width>
+				<height>32</height>
+				<label>-</label>
+				<font>-</font>
+				<onclick>PreviousMenu</onclick>
+				<texturefocus>DialogCloseButton-focus.png</texturefocus>
+				<texturenofocus>DialogCloseButton.png</texturenofocus>
+				<onleft>100</onleft>
+				<onright>100</onright>
+				<onup>100</onup>
+				<ondown>100</ondown>
+				<visible>system.getbool(input.enablemouse)</visible>
+			</control>
+			<control type="image">
+				<description>Dialog Header image</description>
+				<left>80</left>
+				<top>15</top>
+				<width>720</width>
+				<height>50</height>
+				<texture>dialogheader.png</texture>
+			</control>
+			<control type="label" id="1">
+				<description>header label</description>
+				<left>40</left>
+				<top>22</top>
+				<width>800</width>
+				<height>30</height>
+				<font>font13_title</font>
+				<align>center</align>
+				<aligny>center</aligny>
+				<textcolor>selected</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+                        <control type="group" id="200">
+			        <description>EQ Control Group</description>
+				<left>30</left>
+				<top>70</top>
+				<width>200</width>
+				<height>500</height>
+			        <defaultcontrol>201</defaultcontrol>
+			        <onup>100</onup>
+			        <ondown>100</ondown>
+			        <onleft>400</onleft>
+			        <onright>300</onright>
+        	                <control type="radiobutton" id="201">
+            	        	        <description>Radiobutton EQ Enabled</description>
+            	             	        <left>0</left>
+            	             	        <top>0</top>
+            	             	        <width>260</width>
+            	             	        <height>40</height>
+            	             	        <font>font14</font>
+            	             	        <textcolor>FFFFFFFF</textcolor>
+			     	        <align>center</align>
+      			     	        <aligny>center</aligny>
+			     	        <onup>208</onup>
+			     	        <ondown>202</ondown>
+			     	        <onleft>400</onleft>
+			     	        <onright>300</onright>
+        	                </control>
+        		        <control type="radiobutton" id="202">
+            			        <description>Radiobutton Keep Settings</description>
+            			        <left>0</left>
+            			        <top>45</top>
+            			        <width>260</width>
+            			        <height>40</height>
+            			        <font>font14</font>
+            			        <textcolor>FFFFFFFF</textcolor>
+				        <align>center</align>
+      				        <aligny>center</aligny>
+				        <onup>201</onup>
+				        <ondown>203</ondown>
+				        <onleft>400</onleft>
+				        <onright>300</onright>
+        		        </control>
+			        <control type="button" id="203">
+				        <description>Preset Select Button</description>
+				        <left>0</left>
+				        <top>90</top>
+				        <height>40</height>
+				        <width>260</width>
+                		        <textoffsetx>12</textoffsetx>
+                		        <align>center</align>
+            			        <aligny>center</aligny>
+				        <onup>202</onup>
+				        <ondown>204</ondown>
+				        <onleft>400</onleft>
+				        <onright>300</onright>
+		    	        </control>
+        		        <control type="button" id="204">
+            			        <description>Delete Preset Button</description>
+            			        <left>0</left>
+            			        <top>135</top>
+            			        <width>260</width>
+            			        <height>40</height>
+            			        <textoffsetx>12</textoffsetx>
+            			        <align>center</align>
+            			        <aligny>center</aligny>
+				        <onup>203</onup>
+				        <ondown>205</ondown>
+				        <onleft>400</onleft>
+            			        <onright>300</onright>
+        		        </control>			
+			        <control type="button" id="205">
+            			        <description>Save Perset Button</description>
+            			        <left>0</left>
+            			        <top>180</top>
+            			        <width>260</width>
+            			        <height>40</height>
+            			        <textoffsetx>12</textoffsetx>
+            			        <align>center</align>
+            			        <aligny>center</aligny>
+				        <onup>204</onup>
+				        <ondown>206</ondown>
+				        <onleft>400</onleft>
+				        <onright>300</onright>
+        		        </control>
+                		<control type="button" id="206">
+                    			<description>Reset Settings Button</description>
+                    			<left>0</left>
+                    			<top>225</top>
+                    			<width>260</width>
+                    			<height>40</height>
+                    			<textoffsetx>12</textoffsetx>
+                    			<align>center</align>
+                    			<aligny>center</aligny>
+				        <onup>205</onup>
+				        <ondown>207</ondown>
+				        <onleft>400</onleft>
+                    			<onright>300</onright>
+                		</control>			
+                		<control type="button" id="207">
+                    			<description>Apply Settings Button</description>
+                    			<left>0</left>
+                    			<top>270</top>
+                    			<width>260</width>
+                    			<height>40</height>
+                    			<textoffsetx>12</textoffsetx>
+                    			<align>center</align>
+                    			<aligny>center</aligny>
+				        <onup>206</onup>
+				        <ondown>208</ondown>
+				        <onleft>400</onleft>
+                    			<onright>300</onright>
+                		</control>
+                		<control type="button" id="208">
+                    			<description>Quit Button</description>
+                    			<left>0</left>
+                    			<top>315</top>
+                    			<width>260</width>
+                    			<height>40</height>
+                    			<textoffsetx>12</textoffsetx>
+                    			<align>center</align>
+                    			<aligny>center</aligny>
+				        <onup>207</onup>
+				        <ondown>201</ondown>
+                    			<onleft>400</onleft>
+                                        <onright>300</onright>
+                		</control>
+		        </control>
+                        <control type="grouplist" id="300">
+			        <description>EQ Parsets</description>
+			        <left>300</left>
+			        <top>70</top>
+			        <width>560</width>
+			        <height>500</height>
+			        <itemgap>5</itemgap>
+			        <pagecontrol>400</pagecontrol>
+			        <scrolltime>200</scrolltime>
+			        <orientation>vertical</orientation>
+			        <usecontrolcoords>false</usecontrolcoords>
+			        <visible>true</visible>
+			        <onup>100</onup>
+			        <ondown>100</ondown>
+			        <onleft>200</onleft>
+			        <onright>400</onright>
+			        <control type="group" id="1000">
+				        <description>ControlGroup</description>
+				        <width>560</width>
+				        <height>50</height>
+				        <onup>100</onup>
+				        <ondown>100</ondown>
+				        <onleft>200</onleft>
+				        <onright>400</onright>
+				        <control type="label" id="1001">
+					        <description>ControlName</description>
+					        <left>0</left>
+					        <top>0</top>
+					        <width>100</width>
+					        <height>45</height>
+					        <font>font13</font>
+					        <textcolor>FFFFFFFF</textcolor>
+					        <align>right</align>
+					        <aligny>center</aligny>
+					        <label>50 Hz</label>
+				        </control>
+				        <control type="slider" id="1002">
+					        <description>Slider</description>
+					        <left>110</left>
+					        <top>10</top>
+					        <width>300</width>
+					        <height>25</height>
+					        <texturefocus>-</texturefocus>
+					        <texturenofocus>-</texturenofocus>
+					        <texturesliderbar>osd_slider_bg_2.png</texturesliderbar>
+					        <textureslidernib>osd_slider_nibNF.png</textureslidernib>
+					        <textureslidernibfocus>osd_slider_nib.png</textureslidernibfocus>
+					        <onup>201</onup>
+					        <ondown>2002</ondown>
+				        </control>
+				        <control type="label" id="1003">
+					        <description>ControlDb</description>
+					        <left>420</left>
+					        <top>0</top>
+					        <width>90</width>
+					        <height>45</height>
+					        <font>font13</font>
+					        <textcolor>blue</textcolor>
+					        <align>right</align>
+					        <aligny>center</aligny>
+					        <wrapmultiline>true</wrapmultiline>
+					        <label>dB</label>
+				        </control>
+				        <control type="image">
+					        <description>separator</description>
+					        <left>0</left>
+					        <top>50</top>
+					        <width>560</width>
+					        <height>1</height>
+					        <texture>separator.png</texture>					        
+				        </control>
+			        </control>
+			        <control type="group" id="2000">
+				        <description>ControlGroup</description>
+				        <width>560</width>
+				        <height>50</height>
+				        <onup>100</onup>
+				        <ondown>100</ondown>
+				        <onleft>200</onleft>
+				        <onright>400</onright>
+				        <control type="label" id="2001">
+					        <description>ControlName</description>
+					        <left>0</left>
+					        <top>0</top>
+					        <width>100</width>
+					        <height>45</height>
+					        <font>font13</font>
+					        <textcolor>FFFFFFFF</textcolor>
+					        <align>right</align>
+					        <aligny>center</aligny>
+					        <label>100 Hz</label>
+				        </control>
+				        <control type="slider" id="2002">
+					        <description>Slider</description>
+					        <left>110</left>
+					        <top>10</top>
+					        <width>300</width>
+					        <height>25</height>
+					        <texturefocus>-</texturefocus>
+					        <texturenofocus>-</texturenofocus>
+					        <texturesliderbar>osd_slider_bg_2.png</texturesliderbar>
+					        <textureslidernib>osd_slider_nibNF.png</textureslidernib>
+					        <textureslidernibfocus>osd_slider_nib.png</textureslidernibfocus>
+					        <onup>1002</onup>
+					        <ondown>3002</ondown>
+				        </control>
+				        <control type="label" id="2003">
+					        <description>ControlDB</description>
+					        <left>420</left>
+					        <top>0</top>
+					        <width>90</width>
+					        <height>45</height>
+					        <font>font13</font>
+					        <textcolor>blue</textcolor>
+					        <align>right</align>
+					        <aligny>center</aligny>
+					        <wrapmultiline>true</wrapmultiline>
+					        <label>dB</label>
+				        </control>
+				        <control type="image">
+					        <description>separator</description>
+					        <left>0</left>
+					        <top>50</top>
+					        <width>560</width>
+					        <height>1</height>
+					        <texture>separator.png</texture>					        
+				        </control>
+			        </control>
+			        <control type="group" id="3000">
+				        <description>ControlGroup</description>
+				        <width>560</width>
+				        <height>50</height>
+				        <onup>100</onup>
+				        <ondown>100</ondown>
+				        <onleft>200</onleft>
+				        <onright>400</onright>
+				        <control type="label" id="3001">
+					        <description>ControlName</description>
+					        <left>0</left>
+					        <top>0</top>
+					        <width>100</width>
+					        <height>45</height>
+					        <font>font13</font>
+					        <textcolor>FFFFFFFF</textcolor>
+					        <align>right</align>
+					        <aligny>center</aligny>
+					        <wrapmultiline>true</wrapmultiline>
+					        <label>156 Hz</label>
+				        </control>
+				        <control type="slider" id="3002">
+					        <description>Slider</description>
+					        <left>110</left>
+					        <top>10</top>
+					        <width>300</width>
+					        <height>25</height>
+					        <texturefocus>-</texturefocus>
+					        <texturenofocus>-</texturenofocus>
+					        <texturesliderbar>osd_slider_bg_2.png</texturesliderbar>
+					        <textureslidernib>osd_slider_nibNF.png</textureslidernib>
+					        <textureslidernibfocus>osd_slider_nib.png</textureslidernibfocus>
+					        <onup>2002</onup>
+					        <ondown>4002</ondown>
+				        </control>
+				        <control type="label" id="3003">
+					        <description>ControlDb</description>
+					        <left>420</left>
+					        <top>0</top>
+					        <width>90</width>
+					        <height>45</height>
+					        <font>font13</font>
+					        <textcolor>blue</textcolor>
+					        <align>right</align>
+					        <aligny>center</aligny>
+					        <wrapmultiline>true</wrapmultiline>
+					        <label>dB</label>
+				        </control>
+				        <control type="image">
+					        <description>separator</description>
+					        <left>0</left>
+					        <top>50</top>
+					        <width>560</width>
+					        <height>1</height>
+					        <texture>separator.png</texture>
+				        </control>
+			        </control>
+			        <control type="group" id="4000">
+				        <description>ControlGroup</description>
+				        <width>560</width>
+				        <height>50</height>
+				        <onup>100</onup>
+				        <ondown>100</ondown>
+				        <onleft>200</onleft>
+				        <onright>400</onright>
+				        <control type="label" id="4001">
+					        <description>ControlName</description>
+					        <left>0</left>
+					        <top>0</top>
+					        <width>100</width>
+					        <height>45</height>
+					        <font>font13</font>
+					        <textcolor>FFFFFFFF</textcolor>
+					        <align>right</align>
+					        <aligny>center</aligny>
+					        <wrapmultiline>true</wrapmultiline>
+					        <label>220 Hz</label>
+				        </control>
+				        <control type="slider" id="4002">
+					        <description>Slider</description>
+					        <left>110</left>
+					        <top>10</top>
+					        <width>300</width>
+					        <height>25</height>
+					        <texturefocus>-</texturefocus>
+					        <texturenofocus>-</texturenofocus>
+					        <texturesliderbar>osd_slider_bg_2.png</texturesliderbar>
+					        <textureslidernib>osd_slider_nibNF.png</textureslidernib>
+					        <textureslidernibfocus>osd_slider_nib.png</textureslidernibfocus>
+					        <onup>3002</onup>
+					        <ondown>5002</ondown>
+				        </control>
+				        <control type="label" id="4003">
+					        <description>ControlDB</description>
+					        <left>420</left>
+					        <top>0</top>
+					        <width>90</width>
+					        <height>45</height>
+					        <font>font13</font>
+					        <textcolor>blue</textcolor>
+					        <align>right</align>
+					        <aligny>center</aligny>
+					        <wrapmultiline>true</wrapmultiline>
+					        <label>dB</label>
+				        </control>
+				        <control type="image">
+					        <description>separator</description>
+					        <left>0</left>
+					        <top>50</top>
+					        <width>560</width>
+					        <height>1</height>
+					        <texture>separator.png</texture>
+				        </control>
+			        </control>
+			        <control type="group" id="5000">
+				        <description>ControlGroup</description>
+				        <width>560</width>
+				        <height>50</height>
+				        <onup>100</onup>
+				        <ondown>100</ondown>
+				        <onleft>200</onleft>
+				        <onright>400</onright>
+				        <control type="label" id="5001">
+					        <description>ControlName</description>
+					        <left>0</left>
+					        <top>0</top>
+					        <width>100</width>
+					        <height>45</height>
+					        <font>font13</font>
+					        <textcolor>FFFFFFFF</textcolor>
+					        <align>right</align>
+					        <aligny>center</aligny>
+					        <wrapmultiline>true</wrapmultiline>
+					        <label>311 Hz</label>
+				        </control>
+				        <control type="slider" id="5002">
+					        <description>Slider</description>
+					        <left>110</left>
+					        <top>10</top>
+					        <width>300</width>
+					        <height>25</height>
+					        <texturefocus>-</texturefocus>
+					        <texturenofocus>-</texturenofocus>
+					        <texturesliderbar>osd_slider_bg_2.png</texturesliderbar>
+					        <textureslidernib>osd_slider_nibNF.png</textureslidernib>
+					        <textureslidernibfocus>osd_slider_nib.png</textureslidernibfocus>
+					        <onup>4002</onup>
+					        <ondown>6002</ondown>
+				        </control>
+				        <control type="label" id="5003">
+					        <description>ControlDb</description>
+					        <left>420</left>
+					        <top>0</top>
+					        <width>90</width>
+					        <height>45</height>
+					        <font>font13</font>
+					        <textcolor>blue</textcolor>
+					        <align>right</align>
+					        <aligny>center</aligny>
+					        <wrapmultiline>true</wrapmultiline>
+					        <label>dB</label>
+				        </control>
+				        <control type="image">
+					        <description>separator</description>
+					        <left>0</left>
+					        <top>50</top>
+					        <width>560</width>
+					        <height>1</height>
+					        <texture>separator.png</texture>					        
+				        </control>
+			        </control>
+			        <control type="group" id="6000">
+				        <description>ControlGroup</description>
+				        <width>560</width>
+				        <height>50</height>
+				        <onup>2</onup>
+				        <ondown>3</ondown>
+				        <onleft>200</onleft>
+				        <onright>400</onright>
+				        <control type="label" id="6001">
+					        <description>ControlName</description>
+					        <left>0</left>
+					        <top>0</top>
+					        <width>100</width>
+					        <height>45</height>
+					        <font>font13</font>
+					        <textcolor>FFFFFFFF</textcolor>
+					        <align>right</align>
+					        <aligny>center</aligny>
+					        <wrapmultiline>true</wrapmultiline>
+					        <label>440 Hz</label>
+				        </control>
+				        <control type="slider" id="6002">
+					        <description>Slider</description>
+					        <left>110</left>
+					        <top>10</top>
+					        <width>300</width>
+					        <height>25</height>
+					        <texturefocus>-</texturefocus>
+					        <texturenofocus>-</texturenofocus>
+					        <texturesliderbar>osd_slider_bg_2.png</texturesliderbar>
+					        <textureslidernib>osd_slider_nibNF.png</textureslidernib>
+					        <textureslidernibfocus>osd_slider_nib.png</textureslidernibfocus>
+					        <onup>5002</onup>
+					        <ondown>7002</ondown>
+				        </control>
+				        <control type="label" id="6003">
+					        <description>ControlDB</description>
+					        <left>420</left>
+					        <top>0</top>
+					        <width>90</width>
+					        <height>45</height>
+					        <font>font13</font>
+					        <textcolor>blue</textcolor>
+					        <align>right</align>
+					        <aligny>center</aligny>
+					        <wrapmultiline>true</wrapmultiline>
+					        <label>dB</label>
+				        </control>
+				        <control type="image">
+					        <description>separator</description>
+					        <left>0</left>
+					        <top>50</top>
+					        <width>560</width>
+					        <height>1</height>
+					        <texture>separator.png</texture>					      
+				        </control>
+			        </control>
+			        <control type="group" id="7000">
+				        <description>ControlGroup</description>
+				        <width>560</width>
+				        <height>50</height>
+				        <onup>100</onup>
+				        <ondown>100</ondown>
+				        <onleft>200</onleft>
+				        <onright>400</onright>
+				        <control type="label" id="7001">
+					        <description>ControlName</description>
+					        <left>0</left>
+					        <top>0</top>
+					        <width>100</width>
+					        <height>45</height>
+					        <font>font13</font>
+					        <textcolor>FFFFFFFF</textcolor>
+					        <align>right</align>
+					        <aligny>center</aligny>
+					        <wrapmultiline>true</wrapmultiline>
+					        <label>622 Hz</label>
+				        </control>
+				        <control type="slider" id="7002">
+					        <description>Slider</description>
+					        <left>110</left>
+					        <top>10</top>
+					        <width>300</width>
+					        <height>25</height>
+					        <texturefocus>-</texturefocus>
+					        <texturenofocus>-</texturenofocus>
+					        <texturesliderbar>osd_slider_bg_2.png</texturesliderbar>
+					        <textureslidernib>osd_slider_nibNF.png</textureslidernib>
+					        <textureslidernibfocus>osd_slider_nib.png</textureslidernibfocus>
+					        <onup>6002</onup>
+					        <ondown>8002</ondown>
+				        </control>
+				        <control type="label" id="7003">
+					        <description>ControlDb</description>
+					        <left>420</left>
+					        <top>0</top>
+					        <width>90</width>
+					        <height>45</height>
+					        <font>font13</font>
+					        <textcolor>blue</textcolor>
+					        <align>right</align>
+					        <aligny>center</aligny>
+					        <wrapmultiline>true</wrapmultiline>
+					        <label>dB</label>
+				        </control>
+				        <control type="image">
+					        <description>separator</description>
+					        <left>0</left>
+					        <top>50</top>
+					        <width>560</width>
+					        <height>1</height>
+					        <texture>separator.png</texture>					        
+				        </control>
+			        </control>
+			        <control type="group" id="8000">
+				        <description>ControlGroup</description>
+				        <width>560</width>
+				        <height>50</height>
+				        <onup>100</onup>
+				        <ondown>100</ondown>
+				        <onleft>200</onleft>
+				        <onright>400</onright>
+				        <control type="label" id="8001">
+					        <description>ControlName</description>
+					        <left>0</left>
+					        <top>0</top>
+					        <width>100</width>
+					        <height>45</height>
+					        <font>font13</font>
+					        <textcolor>FFFFFFFF</textcolor>
+					        <align>right</align>
+					        <aligny>center</aligny>
+					        <wrapmultiline>true</wrapmultiline>
+					        <label>880 Hz</label>
+				        </control>
+				        <control type="slider" id="8002">
+					        <description>Slider</description>
+					        <left>110</left>
+					        <top>10</top>
+					        <width>300</width>
+					        <height>25</height>
+					        <texturefocus>-</texturefocus>
+					        <texturenofocus>-</texturenofocus>
+					        <texturesliderbar>osd_slider_bg_2.png</texturesliderbar>
+					        <textureslidernib>osd_slider_nibNF.png</textureslidernib>
+					        <textureslidernibfocus>osd_slider_nib.png</textureslidernibfocus>
+					        <onup>7002</onup>
+					        <ondown>9002</ondown>
+				        </control>
+				        <control type="label" id="8003">
+					        <description>ControlDB</description>
+					        <left>420</left>
+					        <top>0</top>
+					        <width>90</width>
+					        <height>45</height>
+					        <font>font13</font>
+					        <textcolor>blue</textcolor>
+					        <align>right</align>
+					        <aligny>center</aligny>
+					        <wrapmultiline>true</wrapmultiline>
+					        <label>dB</label>
+				        </control>
+				        <control type="image">
+					        <description>separator</description>
+					        <left>0</left>
+					        <top>50</top>
+					        <width>560</width>
+					        <height>1</height>
+					        <texture>separator.png</texture>					        
+				        </control>
+			        </control>
+			        <control type="group" id="9000">
+				        <description>ControlGroup</description>
+				        <width>560</width>
+				        <height>50</height>
+				        <onup>100</onup>
+				        <ondown>100</ondown>
+				        <onleft>200</onleft>
+				        <onright>400</onright>
+				        <control type="label" id="9001">
+					        <description>ControlName</description>
+					        <left>0</left>
+					        <top>0</top>
+					        <width>100</width>
+					        <height>45</height>
+					        <font>font13</font>
+					        <textcolor>FFFFFFFF</textcolor>
+					        <align>right</align>
+					        <aligny>center</aligny>
+					        <wrapmultiline>true</wrapmultiline>
+					        <label>1,25 kHz</label>
+				        </control>
+				        <control type="slider" id="9002">
+					        <description>Slider</description>
+					        <left>110</left>
+					        <top>10</top>
+					        <width>300</width>
+					        <height>25</height>
+					        <texturefocus>-</texturefocus>
+					        <texturenofocus>-</texturenofocus>
+					        <texturesliderbar>osd_slider_bg_2.png</texturesliderbar>
+					        <textureslidernib>osd_slider_nibNF.png</textureslidernib>
+					        <textureslidernibfocus>osd_slider_nib.png</textureslidernibfocus>
+					        <onup>8002</onup>
+					        <ondown>10002</ondown>
+				        </control>
+				        <control type="label" id="9003">
+					        <description>ControlDb</description>
+					        <left>420</left>
+					        <top>0</top>
+					        <width>90</width>
+					        <height>45</height>
+					        <font>font13</font>
+					        <textcolor>blue</textcolor>
+					        <align>right</align>
+					        <aligny>center</aligny>
+					        <wrapmultiline>true</wrapmultiline>
+					        <label>dB</label>
+				        </control>
+				        <control type="image">
+					        <description>separator</description>
+					        <left>0</left>
+					        <top>50</top>
+					        <width>560</width>
+					        <height>1</height>
+					        <texture>separator.png</texture>					        
+				        </control>
+			        </control>
+			        <control type="group" id="10000">
+				        <description>ControlGroup</description>
+				        <width>560</width>
+				        <height>50</height>
+				        <onup>100</onup>
+				        <ondown>100</ondown>
+				        <onleft>200</onleft>
+				        <onright>400</onright>
+				        <control type="label" id="10001">
+					        <description>ControlName</description>
+					        <left>0</left>
+					        <top>0</top>
+					        <width>100</width>
+					        <height>45</height>
+					        <font>font13</font>
+					        <textcolor>FFFFFFFF</textcolor>
+					        <align>right</align>
+					        <aligny>center</aligny>
+					        <wrapmultiline>true</wrapmultiline>
+					        <label>2,5 kHz</label>
+				        </control>
+				        <control type="slider" id="10002">
+					        <description>Slider</description>
+					        <left>110</left>
+					        <top>10</top>
+					        <width>300</width>
+					        <height>25</height>
+					        <texturefocus>-</texturefocus>
+					        <texturenofocus>-</texturenofocus>
+					        <texturesliderbar>osd_slider_bg_2.png</texturesliderbar>
+					        <textureslidernib>osd_slider_nibNF.png</textureslidernib>
+					        <textureslidernibfocus>osd_slider_nib.png</textureslidernibfocus>
+					        <onup>9002</onup>
+					        <ondown>11002</ondown>
+				        </control>
+				        <control type="label" id="10003">
+					        <description>ControlDB</description>
+					        <left>420</left>
+					        <top>0</top>
+					        <width>90</width>
+					        <height>45</height>
+					        <font>font13</font>
+					        <textcolor>blue</textcolor>
+					        <align>right</align>
+					        <aligny>center</aligny>
+					        <wrapmultiline>true</wrapmultiline>
+					        <label>dB</label>
+				        </control>
+				        <control type="image">
+					        <description>separator</description>
+					        <left>0</left>
+					        <top>50</top>
+					        <width>560</width>
+					        <height>1</height>
+					        <texture>separator.png</texture>
+				        </control>
+			        </control>
+			        <control type="group" id="11000">
+				        <description>ControlGroup</description>
+				        <width>560</width>
+				        <height>50</height>
+				        <onup>100</onup>
+				        <ondown>100</ondown>
+				        <onleft>200</onleft>
+				        <onright>400</onright>
+				        <control type="label" id="11001">
+					        <description>ControlName</description>
+					        <left>0</left>
+					        <top>0</top>
+					        <width>100</width>
+					        <height>45</height>
+					        <font>font13</font>
+					        <textcolor>FFFFFFFF</textcolor>
+					        <align>right</align>
+					        <aligny>center</aligny>
+					        <wrapmultiline>true</wrapmultiline>
+					        <label>3,5 kHz</label>
+				        </control>
+				        <control type="slider" id="11002">
+					        <description>Slider</description>
+					        <left>110</left>
+					        <top>10</top>
+					        <width>300</width>
+					        <height>25</height>
+					        <texturefocus>-</texturefocus>
+					        <texturenofocus>-</texturenofocus>
+					        <texturesliderbar>osd_slider_bg_2.png</texturesliderbar>
+					        <textureslidernib>osd_slider_nibNF.png</textureslidernib>
+					        <textureslidernibfocus>osd_slider_nib.png</textureslidernibfocus>
+					        <onup>10002</onup>
+					        <ondown>12002</ondown>
+				        </control>
+				        <control type="label" id="11003">
+					        <description>ControlDb</description>
+					        <left>420</left>
+					        <top>0</top>
+					        <width>90</width>
+					        <height>45</height>
+					        <font>font13</font>
+					        <textcolor>blue</textcolor>
+					        <align>right</align>
+					        <aligny>center</aligny>
+					        <wrapmultiline>true</wrapmultiline>
+					        <label>dB</label>
+				        </control>
+				        <control type="image">
+					        <description>separator</description>
+					        <left>0</left>
+					        <top>50</top>
+					        <width>560</width>
+					        <height>1</height>
+					        <texture>separator.png</texture>
+				        </control>
+			        </control>
+			        <control type="group" id="12000">
+				        <description>ControlGroup</description>
+				        <width>560</width>
+				        <height>50</height>
+				        <onup>100</onup>
+				        <ondown>100</ondown>
+				        <onleft>200</onleft>
+				        <onright>400</onright>
+				        <control type="label" id="12001">
+					        <description>ControlName</description>
+					        <left>0</left>
+					        <top>0</top>
+					        <width>100</width>
+					        <height>45</height>
+					        <font>font13</font>
+					        <textcolor>FFFFFFFF</textcolor>
+					        <align>right</align>
+					        <aligny>center</aligny>
+					        <wrapmultiline>true</wrapmultiline>
+					        <label>5 kHz</label>
+				        </control>
+				        <control type="slider" id="12002">
+					        <description>Slider</description>
+					        <left>110</left>
+					        <top>10</top>
+					        <width>300</width>
+					        <height>25</height>
+					        <texturefocus>-</texturefocus>
+					        <texturenofocus>-</texturenofocus>
+					        <texturesliderbar>osd_slider_bg_2.png</texturesliderbar>
+					        <textureslidernib>osd_slider_nibNF.png</textureslidernib>
+					        <textureslidernibfocus>osd_slider_nib.png</textureslidernibfocus>
+					        <onup>11002</onup>
+					        <ondown>13002</ondown>
+				        </control>
+				        <control type="label" id="12003">
+					        <description>ControlDB</description>
+					        <left>420</left>
+					        <top>0</top>
+					        <width>90</width>
+					        <height>45</height>
+					        <font>font13</font>
+					        <textcolor>blue</textcolor>
+					        <align>right</align>
+					        <aligny>center</aligny>
+					        <wrapmultiline>true</wrapmultiline>
+					        <label>dB</label>
+				        </control>
+				        <control type="image">
+					        <description>separator</description>
+					        <left>0</left>
+					        <top>50</top>
+					        <width>560</width>
+					        <height>1</height>
+					        <texture>separator.png</texture>
+					        
+				        </control>
+			        </control>
+			        <control type="group" id="13000">
+				        <description>ControlGroup</description>
+				        <width>560</width>
+				        <height>50</height>
+				        <onup>100</onup>
+				        <ondown>100</ondown>
+				        <onleft>200</onleft>
+				        <onright>400</onright>
+				        <control type="label" id="13001">
+					        <description>ControlName</description>
+					        <left>0</left>
+					        <top>0</top>
+					        <width>100</width>
+					        <height>45</height>
+					        <font>font13</font>
+					        <textcolor>FFFFFFFF</textcolor>
+					        <align>right</align>
+					        <aligny>center</aligny>
+					        <wrapmultiline>true</wrapmultiline>
+					        <label>10 kHz</label>
+				        </control>
+				        <control type="slider" id="13002">
+					        <description>Slider</description>
+					        <left>110</left>
+					        <top>10</top>
+					        <width>300</width>
+					        <height>25</height>
+					        <texturefocus>-</texturefocus>
+					        <texturenofocus>-</texturenofocus>
+					        <texturesliderbar>osd_slider_bg_2.png</texturesliderbar>
+					        <textureslidernib>osd_slider_nibNF.png</textureslidernib>
+					        <textureslidernibfocus>osd_slider_nib.png</textureslidernibfocus>
+					        <onup>12002</onup>
+					        <ondown>14002</ondown>
+				        </control>
+				        <control type="label" id="13003">
+					        <description>ControlDb</description>
+					        <left>420</left>
+					        <top>0</top>
+					        <width>90</width>
+					        <height>45</height>
+					        <font>font13</font>
+					        <textcolor>blue</textcolor>
+					        <align>right</align>
+					        <aligny>center</aligny>
+					        <wrapmultiline>true</wrapmultiline>
+					        <label>dB</label>
+				        </control>
+				        <control type="image">
+					        <description>separator</description>
+					        <left>0</left>
+					        <top>50</top>
+					        <width>560</width>
+					        <height>1</height>
+					        <texture>separator.png</texture>					        
+				        </control>
+			        </control>
+			        <control type="group" id="14000">
+				        <description>ControlGroup</description>
+				        <width>560</width>
+				        <height>50</height>
+				        <onup>100</onup>
+				        <ondown>100</ondown>
+				        <onleft>200</onleft>
+				        <onright>400</onright>
+				        <control type="label" id="14001">
+					        <description>ControlName</description>
+					        <left>0</left>
+					        <top>0</top>
+					        <width>100</width>
+					        <height>45</height>
+					        <font>font13</font>
+					        <textcolor>FFFFFFFF</textcolor>
+					        <align>right</align>
+					        <aligny>center</aligny>
+					        <wrapmultiline>true</wrapmultiline>
+					        <label>20 kHz</label>
+				        </control>
+				        <control type="slider" id="14002">
+					        <description>Slider</description>
+					        <left>110</left>
+					        <top>10</top>
+					        <width>300</width>
+					        <height>25</height>
+					        <texturefocus>-</texturefocus>
+					        <texturenofocus>-</texturenofocus>
+					        <texturesliderbar>osd_slider_bg_2.png</texturesliderbar>
+					        <textureslidernib>osd_slider_nibNF.png</textureslidernib>
+					        <textureslidernibfocus>osd_slider_nib.png</textureslidernibfocus>
+					        <onup>13002</onup>
+					        <ondown>15002</ondown>
+				        </control>
+				        <control type="label" id="14003">
+					        <description>ControlDB</description>
+					        <left>420</left>
+					        <top>0</top>
+					        <width>90</width>
+					        <height>45</height>
+					        <font>font13</font>
+					        <textcolor>blue</textcolor>
+					        <align>right</align>
+					        <aligny>center</aligny>
+					        <wrapmultiline>true</wrapmultiline>
+					        <label>dB</label>
+				        </control>
+				        <control type="image">
+					        <description>separator</description>
+					        <left>0</left>
+					        <top>50</top>
+					        <width>560</width>
+					        <height>1</height>
+					        <texture>separator.png</texture>					        
+				        </control>
+			        </control>
+			        <control type="group" id="15000">
+				        <description>ControlGroup</description>
+				        <width>560</width>
+				        <height>50</height>
+				        <onup>100</onup>
+				        <ondown>100</ondown>
+				        <onleft>200</onleft>
+				        <onright>400</onright>
+				        <control type="label" id="15001">
+					        <description>ControlName</description>
+					        <left>0</left>
+					        <top>0</top>
+					        <width>100</width>
+					        <height>45</height>
+					        <font>font13</font>
+					        <textcolor>FFFFFFFF</textcolor>
+					        <align>right</align>
+					        <aligny>center</aligny>
+					        <wrapmultiline>true</wrapmultiline>
+					        <label>20 kHz</label>
+				        </control>
+				        <control type="slider" id="15002">
+					        <description>Slider</description>
+					        <left>110</left>
+					        <top>10</top>
+					        <width>300</width>
+					        <height>25</height>
+					        <texturefocus>-</texturefocus>
+					        <texturenofocus>-</texturenofocus>
+					        <texturesliderbar>osd_slider_bg_2.png</texturesliderbar>
+					        <textureslidernib>osd_slider_nibNF.png</textureslidernib>
+					        <textureslidernibfocus>osd_slider_nib.png</textureslidernibfocus>
+					        <onup>14002</onup>
+					        <ondown>400</ondown>
+				        </control>
+				        <control type="label" id="15003">
+					        <description>ControlDB</description>
+					        <left>420</left>
+					        <top>0</top>
+					        <width>90</width>
+					        <height>45</height>
+					        <font>font13</font>
+					        <textcolor>blue</textcolor>
+					        <align>right</align>
+					        <aligny>center</aligny>
+					        <wrapmultiline>true</wrapmultiline>
+					        <label>dB</label>
+				        </control>
+				        <control type="image">
+					        <description>separator</description>
+					        <left>0</left>
+					        <top>50</top>
+					        <width>560</width>
+					        <height>1</height>
+					        <texture>separator.png</texture>					        
+				        </control>
+			        </control>
+                        </control>
+                        <control type="scrollbar" id="400">
+				<left>840</left>
+				<top>70</top>
+				<width>25</width>
+				<height>500</height>
+				<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+				<texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
+				<texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+				<textureslidernib>ScrollBarNib.png</textureslidernib>
+				<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
+				<onleft>300</onleft>
+				<onright>200</onright>
+				<showonepage>false</showonepage>
+				<orientation>vertical</orientation>
+			</control>		
+	        </control>
+	</controls>
+</window>
